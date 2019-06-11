@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { TouchableOpacity , Image, Text, View, StyleSheet, TextInput, Alert} from 'react-native';
 
 const styles = StyleSheet.create({
+  greeting: {
+    alignItems: 'center',
+  },
   bigBlue: {
     color: 'blue',
     fontWeight: 'bold',
@@ -9,6 +12,32 @@ const styles = StyleSheet.create({
   },
   red: {
     color: 'red',
+  },
+  labledImageOuter: {
+    flex: 1, 
+    flexDirection: 'column', 
+    padding: 0, 
+    margin: 0, 
+    backgroundColor: 'blue'
+  },
+  image: {
+    justifyContent: "flex-start",
+    marginTop: 0,
+    paddingTop: 0,
+    width: null,
+    height: null,
+    aspectRatio: 4/3
+  },
+  mainContainer: {
+    flex: 1, flexDirection: 'column'
+  },
+  textInputContainer: { 
+    flex: 1, 
+    backgroundColor: 'powderblue'
+  },
+  textInput: { 
+    height: 40, 
+    justifyContent: "flex-start" 
   },
   button: {
     marginBottom: 30,
@@ -25,7 +54,7 @@ const styles = StyleSheet.create({
 class Greeting extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center'}}>
+      <View style={styles.greeting}>
         <Text style={styles.red}>Label: {this.props.name}</Text>
       </View>
     );
@@ -49,27 +78,16 @@ class LabeledImage extends Component {
       return null;
     }
     return (
-      <View style={{flex: 1, flexDirection: 'column', padding: 0, margin: 0, backgroundColor: 'blue'}}>
+      <View style={styles.labledImageOuter}>
         <Image 
           source={this.props.source}  
           resizeMode='contain' 
-          style={{
-            justifyContent: "flex-start",
-            marginTop: 0,
-            paddingTop: 0,
-            width: null,
-            height: null,
-            aspectRatio: 4/3
-          }}/>
+          style={styles.image}/>
         <Greeting name={this.props.label} />
       </View>
     );
   }
 }
-
-
-
-
 
 export default class Bananas extends Component {
 
@@ -92,11 +110,11 @@ export default class Bananas extends Component {
   
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: 'column' }}>
+      <View style={styles.mainContainer}>
         <LabeledImage source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg' }} label={"Buy " + this.state.whichFruit + "!"} />
-        <View style={{ flex: 1, backgroundColor: 'powderblue', }}>
+        <View style={styles.textInputContainer}>
           <TextInput
-            style={{ height: 40, justifyContent: "flex-start" }}
+            style={styles.textInput}
             placeholder="What's your favorite fruit?"
             onChangeText={(text) => (
               this.setState({ whichFruit: text })
