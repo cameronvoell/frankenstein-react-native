@@ -126,7 +126,7 @@ export default class Bananas extends Component {
           delayLongPress={1000}
           onLongPressButton={this._onLongPressButton} underlayColor="white">
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Touch me (long press not working! :-(</Text>
+            <Text style={styles.buttonText}>Touch me (long press not working :-(</Text>
           </View>
           </TouchableOpacity>
       </View>

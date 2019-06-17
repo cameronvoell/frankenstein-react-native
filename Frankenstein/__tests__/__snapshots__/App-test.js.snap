@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "flex": 1,
+        "flexDirection": "column",
+        "margin": 0,
+        "padding": 0,
+      }
+    }
+  >
+    <Image
+      resizeMode="contain"
+      source={
+        Object {
+          "uri": "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg",
+        }
+      }
+      style={
+        Object {
+          "aspectRatio": 1.3333333333333333,
+          "height": null,
+          "justifyContent": "flex-start",
+          "marginTop": 0,
+          "paddingTop": 0,
+          "width": null,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+        Label: 
+        Buy bananaas!
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "powderblue",
+        "flex": 1,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onChangeText={[Function]}
+      placeholder="What's your favorite fruit?"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "height": 40,
+          "justifyContent": "flex-start",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2196F3",
+          "marginBottom": 30,
+          "width": 260,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "padding": 20,
+          }
+        }
+      >
+        Touch me (long press not working :-(
+      </Text>
+    </View>
+  </View>
+</View>
+`;
